@@ -10,13 +10,13 @@ import signal
 from binascii import hexlify
 import base64
 
+sys.path.append("./scapy-ssl_tls/")
 import logging
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 import scapy
 from scapy.all import *
-
-from scapy_ssl_tls.ssl_tls import *
-from scapy_ssl_tls import ssl_tls_crypto
+from ssl_tls import *
+import ssl_tls_crypto
 
 from pyx509.pkcs7.asn1_models.X509_certificate import Certificate
 from pyx509.pkcs7_models import X509Certificate, PublicKeyInfo, ExtendedKeyUsageExt
@@ -245,7 +245,7 @@ def sslv2_connect(ip, port, protocol, cipher_suite, result_additional_data):
         return NO_STARTTLS
 
 
-    client_hello = SSLv2Record()/SSLv2ClientHello(cipher_suites=SSLv2_CIPHER_SUITES.keys(),challenge=CHALLENGE)
+    client_hello = SSLv2Record()/SSLv2ClientHello(cipher_suites=SSL2_CIPHER_SUITES.keys(),challenge=CHALLENGE)
     s.sendall(str(client_hello))
 
     rlist, wlist, xlist = select.select([s], [], [s], SOCKET_TIMEOUT)
