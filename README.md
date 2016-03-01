@@ -32,7 +32,7 @@ You need the Python `enum`, `scapy`, and `pycrypto` packages.
 
 On a Debian system:
 
-`sudo apt-get install python-enum scapy python-crypto`
+`sudo apt-get install python-enum python-pyasn1 scapy python-crypto`
 
 and also run
 
