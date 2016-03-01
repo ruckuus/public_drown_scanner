@@ -28,7 +28,11 @@ https://mta.openssl.org/pipermail/openssl-dev/2016-March/005602.html
 
 Dependencies:
 --------------
-You need the Python `enum`, `scapy`, and `pycrypto` packages.
+You need the packages listed below.
+This dependency list is unfortunately a work in progress.
+If you think you're missing a dependency, please read the instructions for other operating systems,
+and see if they might shed light on the issue.
+Pull requests clarifying the dependency list (and also general PRs) are welcome.
 
 ### On a Debian system:
 
@@ -40,7 +44,7 @@ and also run
 
 ### On a Fedora/RHEL/CentOS system:
 
-`sudo yum install python-enum scapy python-crypto`
+`sudo yum install python-enum scapy python-crypto tcpdump`
 
 and also run `pip install scapy-ssl_tls`
 
