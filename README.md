@@ -30,9 +30,13 @@ Dependencies:
 --------------
 You need the Python `enum`, `scapy`, and `pycrypto` packages.
 
-On a Debian system: `sudo apt-get install python-enum scapy python-crypto`
+On a Debian system:
+`sudo apt-get install python-enum scapy python-crypto`
+and also run `pip install scapy-ssl_tls`
 
-Or with pip: `sudo pip install enum pycrypto scapy pyasn1`
+Or with pip: `sudo pip install enum pycrypto scapy pyasn1 scapy-ssl_tls`
+
+Mac users also report dnet as a dependency.
 
 Usage examples:
 ---------------
