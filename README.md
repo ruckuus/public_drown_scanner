@@ -34,6 +34,15 @@ If you think you're missing a dependency, please read the instructions for other
 and see if they might shed light on the issue.
 Pull requests clarifying the dependency list (and also general PRs) are welcome.
 
+Some versions of this tool produce the following lines on startup:
+
+```
+Import Error - most likely due to missing pycrypto libraries - disabling crypto functionality
+ImportError('cannot import name TLSHandshake',)
+```
+
+These lines do not prevent the tool from producing its results.
+
 ### On a Debian system:
 
 `sudo apt-get install tcpdump python-enum python-pyasn1 scapy python-crypto`
