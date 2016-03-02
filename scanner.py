@@ -14,8 +14,10 @@ except ImportError:
 import signal
 from binascii import hexlify
 import base64
+import os
+file_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(file_dir + "/scapy-ssl_tls/")
 
-sys.path.append("./scapy-ssl_tls/")
 import logging
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 import scapy
