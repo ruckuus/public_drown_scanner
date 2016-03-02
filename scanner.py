@@ -5,7 +5,12 @@ from enum import Enum
 import time
 import datetime
 import socket
-import Crypto.Cipher
+# In case your pip install pycrypto has placed the module in lowercase directories
+try:
+    import Crypto.Cipher
+except ImportError:
+    import crypto
+    sys.modules['Crypto'] = crypto
 import signal
 from binascii import hexlify
 import base64
