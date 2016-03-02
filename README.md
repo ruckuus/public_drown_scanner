@@ -70,6 +70,12 @@ One user has graciously documented setting up the dependencies
 on a stripped-down installation of CentOS:
 https://github.com/nimia/public_drown_scanner/issues/17
 
+### Docker
+```bash
+docker build -t public-drown-scanner .
+docker run -it public-drown-scanner localhost 443
+```
+
 Usage examples:
 ---------------
 ```
