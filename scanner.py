@@ -328,6 +328,9 @@ def sslv2_connect(ip, port, protocol, cipher_suite, result_additional_data):
     return "%s:%s" % (VULN, base64.b64encode(public_key.exportKey(format='DER')))
 
 if __name__ == '__main__':
+    if len(sys.argv) < 3:
+        sys.exit('Usage: %s <hostname> <port> [-esmtp|-imap|-pop3|-bare]' % sys.argv[0])
+
     ip = sys.argv[1]
     port = int(sys.argv[2])
     scan_id = os.getcwd()
