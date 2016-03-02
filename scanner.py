@@ -273,7 +273,7 @@ def sslv2_connect(ip, port, protocol, cipher_suite, result_additional_data):
         return "3c: %s" % NO_TLS
 
     if not SSLv2ServerHello in server_hello:
-        print '%s: Case 3d; Server hello did not contain server hello' % ip
+        print '%s: Case 3d; Server hello did not contain SSLv2' % ip
         s.close()
         return "3d: %s" % NO_TLS
 
