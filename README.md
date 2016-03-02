@@ -65,6 +65,11 @@ and also run `pip install scapy-ssl_tls`
 
 You may also need dnet as a dependency.
 
+### Even more dependencies
+One user has graciously documented setting up the dependencies
+on a stripped-down installation of CentOS:
+https://github.com/nimia/public_drown_scanner/issues/17
+
 Usage examples:
 ---------------
 ```
