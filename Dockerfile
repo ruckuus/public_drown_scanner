@@ -1,6 +1,8 @@
-FROM ubuntu:14.04
+FROM alpine:3.3
 
-RUN apt-get update && apt-get install -q -y tcpdump python-enum python-pyasn1 scapy python-crypto python-pip python
+RUN apk update
+RUN apk add scapy --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
+RUN apk add --update tcpdump python py-enum34 py-asn1 py-crypto py-pip scapy && rm /var/cache/apk/*
 RUN pip install scapy-ssl_tls
 
 ADD pyx509 pyx509
